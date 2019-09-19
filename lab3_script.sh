@@ -12,11 +12,11 @@ read regEx
 #2
 grep $regEx $fileName
 #3
-grep -c '-' "regex_practice.txt"
+grep -c -P '[0-9]{3}\-[0-9]{3}\-[0-9]{4}' "regex_practice.txt"
 #4
-grep -c '@+' "regex_practice.txt"
-grep '303-' "regex_practice.txt"
-grep "geocities.com" "regex_practice.txt" >> email_results.txt
+grep -c -P '.+@.+\..+' "regex_practice.txt"
+grep -P '303\-[0-9]{3}\-[0-9]{4}' "regex_practice.txt"
+grep "@geocities.com" "regex_practice.txt" >> email_results.txt
 #5
 git add email_results.txt
 #6
